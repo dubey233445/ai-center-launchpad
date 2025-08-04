@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* AI-themed design system for Centre of Excellence in AI
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* AI-themed Dark Color Scheme */
+    --background: 207 44% 8%;  /* #0d1b2a */
+    --foreground: 0 0% 100%;   /* #ffffff */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 207 44% 10%;       /* Slightly lighter than background */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 207 44% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 193 100% 50%;   /* #00d9ff - Cyan accent */
+    --primary-foreground: 207 44% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 207 30% 20%;  /* Dark secondary */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 207 30% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 120 100% 50%;    /* Electric green for hover effects */
+    --accent-foreground: 207 44% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 207 30% 25%;
+    --input: 207 30% 20%;
+    --ring: 193 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom AI theme variables */
+    --ai-glow: 193 100% 50%;           /* #00d9ff glow */
+    --ai-glow-intense: 193 100% 60%;   /* Brighter glow */
+    --ai-electric: 120 100% 50%;       /* Electric green */
+    --ai-neural: 260 100% 70%;         /* Purple for neural effects */
+    
+    /* Gradients */
+    --gradient-ai-primary: linear-gradient(135deg, hsl(193, 100%, 50%), hsl(260, 100%, 70%));
+    --gradient-ai-card: linear-gradient(145deg, hsl(207, 44%, 10%), hsl(207, 30%, 15%));
+    --gradient-neural: linear-gradient(90deg, hsl(193, 100%, 50%), hsl(120, 100%, 50%), hsl(260, 100%, 70%));
+    
+    /* Glassmorphism */
+    --glass-bg: hsla(207, 44%, 12%, 0.8);
+    --glass-border: hsla(193, 100%, 50%, 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.4s ease-in-out;
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
