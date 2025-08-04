@@ -7,6 +7,10 @@ interface HeaderProps {
 }
 
 const Header = ({ onDescriptionClick }: HeaderProps) => {
+  const handleRegisterClick = () => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSegto-z74zObQzhSYVPd8l3UMe8E20TAMfC38OuJdMGxFNH2w/viewform", "_blank");
+  };
+
   return (
     <motion.header
       className="w-full bg-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-40"
@@ -43,9 +47,9 @@ const Header = ({ onDescriptionClick }: HeaderProps) => {
             </h1>
           </motion.div>
 
-          {/* Description Button */}
+          {/* Action Buttons */}
           <motion.div
-            className="flex-shrink-0"
+            className="flex-shrink-0 flex gap-3"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
@@ -56,6 +60,12 @@ const Header = ({ onDescriptionClick }: HeaderProps) => {
               className="bg-card/50 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/60 transition-all duration-300"
             >
               Description
+            </Button>
+            <Button
+              onClick={handleRegisterClick}
+              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+            >
+              Register
             </Button>
           </motion.div>
         </div>
