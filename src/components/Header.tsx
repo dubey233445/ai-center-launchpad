@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import collegeLogo from "@/assets/college-logo.png";
 
-const Header = () => {
+interface HeaderProps {
+  onDescriptionClick: () => void;
+}
+
+const Header = ({ onDescriptionClick }: HeaderProps) => {
   return (
     <motion.header
       className="w-full bg-card/80 backdrop-blur-sm border-b border-border/50 sticky top-0 z-40"
@@ -38,8 +43,21 @@ const Header = () => {
             </h1>
           </motion.div>
 
-          {/* Right spacer to balance the logo */}
-          <div className="flex-shrink-0 w-10 sm:w-12" />
+          {/* Description Button */}
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            <Button
+              onClick={onDescriptionClick}
+              variant="outline"
+              className="bg-card/50 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/60 transition-all duration-300"
+            >
+              Description
+            </Button>
+          </motion.div>
         </div>
       </div>
       
